@@ -10,6 +10,7 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)
 
+#class that will generate the contents of the table in the website.
 class Generate(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(200), nullable=False)
@@ -18,6 +19,7 @@ class Generate(db.Model):
     def __repr__(self):
         return ('<Password %r>' % self.id)
 
+#posting the information
 @app.route('/', methods=['POST', 'GET'])
 def index():
     if (request.method == 'POST'):
