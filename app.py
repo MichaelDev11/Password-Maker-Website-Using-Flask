@@ -1,3 +1,6 @@
+#This was my first project using Flask, I learned what I did in this application from: https://www.youtube.com/watch?v=Z1RJmh_OqeA
+
+
 from flask import Flask, redirect, render_template, request, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
